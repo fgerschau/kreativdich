@@ -4,26 +4,32 @@ head
   title Kreativ Dich
   meta(name="viewport", content="width=device-width, initial-scale=1")
 
+  // Bootstrap CSS
+  link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet")
+
   link(href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet")
 
-  // Required for Previews and Experiments
+  // Required for Prismic Previews and Experiments
   script(src="https://code.jquery.com/jquery-1.12.4.min.js")
   script
     = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
   script(src="//static.cdn.prismic.io/prismic.min.js")
 
-  link(rel="stylesheet", href="/css/index.css")
+  link(rel="stylesheet", href="/css/layout.css")
 
 block header
 
 body
 
-  .nav
+  .nav-bar
     .nav_item_box
       ul
         a(href="/")
           li Home
         a(href="/blog")
           li Blog
+  .content
+    block body
 
-  block body
+block footer
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")

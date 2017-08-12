@@ -1,52 +1,21 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  border: 0;
+.background {
+  height: 600px;
+  width: 100%;
 }
-body {
-  font-family: Lekton, sans-serif;
-}
-.nav {
-  border-bottom: 1px solid black;
-  position: fixed;
-  left: 0;
+.background {
+  position: relative;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 10;
+  height: 300px;
+  background-size: cover;
+  background-attachment: fixed;
   min-width: 300px;
+}
+.title {
   color: white;
+  margin-top: 6em;
 }
-.nav ul {
-  text-align: left;
-  list-style-type: none;
-}
-.nav li {
-  text-align: right;
-  text-transform: uppercase;
-  font-size: 1.125em;
-  padding: 0 30px;
-}
-.nav a {
-  color: inherit;
-  text-decoration: inherit;
-}
-.nav li:hover {
-  color: red;
-}
-.nav_item_box {
-  display: inline-box;
-  max-width: 650px;
-  margin: 0 auto;
-}
-/*Desktop*/
-@media screen and (min-width: 580px) {
-  .nav li {
-    display: inline;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.125em;
-    padding: 0 30px;
-  }
+.slice {
+  height: 200px;
+  padding: 50px 0;
 }

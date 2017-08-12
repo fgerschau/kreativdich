@@ -1,5 +1,19 @@
 extends ./layout.pug
-
 block header
-
+  link(rel="stylesheet" href="/css/index.css")
 block body
+    //- img(src=pagecontent.getImage('page.image').url, class='star')
+    .background(style='background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("' + pagecontent.getImage('homepage.carousel').url + '") no-repeat top center')
+      .container
+        .title
+          h1.text-center
+            strong
+              != pagecontent.getText('homepage.title')
+          h2.text-center
+            | ~
+            != pagecontent.getText('homepage.subtitle')
+            | ~
+    .slice
+      .container
+        .text-center
+          != pagecontent.getStructuredText('homepage.text').asHtml()
