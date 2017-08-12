@@ -1,8 +1,8 @@
 module.exports = function (app) {
-  // In app.js, in place of the block starting with "app.route('/')", put the following:
   app.route('/').get(function(req, res) {
+    const ctx = res.locals.ctx;
     req.prismic.api.getSingle('homepage').then((prismicdoc) => {
-      res.render('index');
+      res.render('index', { pagecontent: prismicdoc, ctx });
     });
   });
 
