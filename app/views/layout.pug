@@ -1,0 +1,29 @@
+doctype html(lang='de')
+
+head
+  title Kreativ Dich
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  link(href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet")
+
+  // Required for Previews and Experiments
+  script(src="https://code.jquery.com/jquery-1.12.4.min.js")
+  script
+    = ctx?"window.prismic = { endpoint: '" + ctx.endpoint + "' };":""
+  script(src="//static.cdn.prismic.io/prismic.min.js")
+
+  link(rel="stylesheet", href="/css/index.css")
+
+block header
+
+body
+
+  .nav
+    .nav_item_box
+      ul
+        a(href="/")
+          li Home
+        a(href="/blog")
+          li Blog
+
+  block body
