@@ -33,12 +33,28 @@ body {
   text-decoration: inherit;
 }
 .nav-bar li:hover {
-  color: red;
+  color: #f694b8;
 }
 .nav_item_box {
   display: inline-block;
   max-width: 650px;
   margin: 0 auto;
+}
+.footer {
+  margin: 20px 0;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.footer .content {
+  display: table;
+  margin: 0 auto;
+}
+.footer img {
+  width: 50px;
+  height: 50px;
+}
+.footer img:hover {
+  filter: invert();
 }
 /*Desktop*/
 @media screen and (min-width: 580px) {
@@ -49,7 +65,4 @@ body {
     font-size: 1.125em;
     padding: 0 30px;
   }
-}
-.content {
-  margin-top: 42px;
 }
