@@ -1,0 +1,48 @@
+extends ./layout
+block header
+  link(rel="stylesheet", href="/css/blogList.css")
+
+block body
+  .content
+    .row.no-gutters
+      - var i = 0
+      while i < posts.length && i < 7
+        - var post = posts[i++]
+        .col-sm-4
+          .background.preview(style= post.imageUrl ? 'background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat' : '')
+            h3.title.text-center!= post.title
+    .container(style="margin-top: 2em;")
+      .row    
+        h1 Alle Einträge
+        table.table.table-bordered#postsTable
+          tbody
+            each post in posts
+              tr
+                td= post.title
+        nav(aria-label="Seiten Auswahl")
+          ul.pagination
+            if (paginationOptions.page - 1) >= paginationOptions.totalPages
+              li.page-item
+                a.page-link(href='/blog?page=' + (paginationOptions.page - 1) aria-label="Vorherige Seite")
+                  span &laquo;
+            else
+              li.page-item(class="disabled")
+                a.page-link(href="#")
+                  span &laquo;
+
+            - var i = 1;
+            while i <= paginationOptions.totalPages && i <= 5
+              li.page-item(class= (paginationOptions.page === i) ? 'active' : '')
+                a.page-link(href='/blog?page=' + i)!= i
+              - i++
+
+            if (paginationOptions.page + 1) <= paginationOptions.totalPages
+              li.page-item
+                a.page-link(href='/blog?page=' + (paginationOptions.page + 1) aria-label="Nächste Seite")
+                  span &raquo;
+            else
+              li.page-item(class="disabled")
+                a.page-link(href="#")
+                  span &raquo;
+
+block footer
