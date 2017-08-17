@@ -41,6 +41,19 @@ body {
   }
 }
 
+a {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a:hover{
+color: rgb(246,148, 184);
+}
+
+.page-link {
+	color: inherit !important;
+}
+
 .nav_item_box{
   display: inline-block;
   max-width: 650px;
@@ -65,6 +78,28 @@ body {
 	img:hover{
 		filter: invert();
 	}
+}
+
+nav {
+	.page-item.active .page-link {
+		background-color: rgb(246,148, 184);
+		border-color: rgb(246,148, 184);
+	}
+}
+
+.content {
+	margin-top: 47px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 /*Desktop*/

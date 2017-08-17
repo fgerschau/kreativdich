@@ -35,6 +35,16 @@ body {
 .nav-bar li:hover {
   color: #f694b8;
 }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #f694b8;
+}
+.page-link {
+  color: inherit !important;
+}
 .nav_item_box {
   display: inline-block;
   max-width: 650px;
@@ -55,6 +65,22 @@ body {
 }
 .footer img:hover {
   filter: invert();
+}
+nav .page-item.active .page-link {
+  background-color: #f694b8;
+  border-color: #f694b8;
+}
+.content {
+  margin-top: 47px;
+}
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 /*Desktop*/
 @media screen and (min-width: 580px) {
