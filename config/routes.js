@@ -44,10 +44,11 @@ module.exports = function (app) {
 
   app.route('/blog/:uid').get((req, res) => {
     req.prismic.api.getByUID('blog-post', req.params.uid).then((prismicdoc) => {
+      const ctx = res.locals.ctx;
       const post = {
         title: prismicdoc.getText('blog-post.title'),
         imageUrl: prismicdoc.getImage('blog-post.title-image') ? prismicdoc.getImage('blog-post.title-image').url : '',
-        text: prismicdoc.getStructuredText('blog-post.text') ? prismicdoc.getStructuredText('blog-post.text').asHtml() : null,
+        text: prismicdoc.getStructuredText('blog-post.text') ? prismicdoc.getStructuredText('blog-post.text').asHtml(ctx) : null,
         keywords: prismicdoc.getText('blog-post.keywords') || null,
       }
 
