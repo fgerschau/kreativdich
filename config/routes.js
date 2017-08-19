@@ -1,12 +1,19 @@
 'use strict';
 const Prismic = require('prismic-nodejs');
 
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+
+function handleError(e) {
+  logger.error(e);
+}
+
 module.exports = function (app) {
   app.route('/').get((req, res) => {
     const ctx = res.locals.ctx;
     req.prismic.api.getSingle('homepage').then((prismicdoc) => {
       res.render('index', { pagecontent: prismicdoc, ctx });
-    });
+    }).catch(handleError);
   });
 
   app.route('/blog').get((req, res) => {
@@ -39,7 +46,7 @@ module.exports = function (app) {
       };
 
       res.render('blogList', { posts, paginationOptions });
-    });
+    }).catch(handleError);
   });
 
   app.route('/blog/:uid').get((req, res) => {
@@ -53,7 +60,7 @@ module.exports = function (app) {
       }
 
       res.render('blog', { post });
-    });
+    }).catch(handleError);
   });
 
   /*
