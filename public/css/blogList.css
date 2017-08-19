@@ -2,6 +2,9 @@
   height: 200px;
   background-size: 100% !important;
 }
+a {
+  color: inherit;
+}
 .title {
   padding: 25% 0;
 }

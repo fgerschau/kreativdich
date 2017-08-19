@@ -1,0 +1,17 @@
+extends ./layout
+block header
+  link(href="/css/blog.css" rel="stylesheet")
+block body
+  .background(style='background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat top center fixed')
+    h1.title.text-center!= post.title
+  .container
+    .row
+      .col-xs-12
+        .post
+          h4 Tags:
+            p!= post.keywords
+          br
+          != post.text
+
+  .background.small(style='background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat top center fixed')
+        

@@ -10,7 +10,7 @@ block body
         - var post = posts[i++]
         .col-sm-4
           .background.preview(style= post.imageUrl ? 'background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat' : '')
-            a.tile(href="/blog/" + post.title)
+            a.tile(href="/blog/" + post.uid)
               h3.title.text-center!= post.title
     .container(style="margin-top: 2em;")
       .row
