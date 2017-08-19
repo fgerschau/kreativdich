@@ -97,3 +97,7 @@ nav .page-item.active .page-link {
   padding-left: 0;
 }
 /*Desktop*/
+.block-img {
+  width: 50%;
+  display: inline-block;
+}
