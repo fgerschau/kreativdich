@@ -37,11 +37,11 @@ body {
   color: #f694b8;
 }
 a {
-  color: inherit;
+  color: #f694b8;
   text-decoration: inherit;
 }
 a:hover {
-  color: #f694b8;
+  color: #f662b8;
 }
 .page-link {
   color: inherit !important;
