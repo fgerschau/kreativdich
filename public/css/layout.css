@@ -23,7 +23,8 @@ body {
   margin: 10px 0;
 }
 .nav-bar li {
-  text-align: right;
+  display: inline;
+  text-align: center;
   text-transform: uppercase;
   font-size: 1.125em;
   padding: 0 30px;
@@ -83,12 +84,3 @@ nav .page-item.active .page-link {
   padding-left: 0;
 }
 /*Desktop*/
-@media screen and (min-width: 580px) {
-  .nav-bar li {
-    display: inline;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1.125em;
-    padding: 0 30px;
-  }
-}
