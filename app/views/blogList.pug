@@ -16,7 +16,7 @@ block body
       .row
         nav(aria-label="Seiten Auswahl")
           ul.pagination
-            if (paginationOptions.page - 1) >= paginationOptions.totalPages
+            if (paginationOptions.page - 1) >= 1
               li.page-item
                 a.page-link(href='/blog?page=' + (paginationOptions.page - 1) aria-label="Vorherige Seite")
                   span &laquo;
