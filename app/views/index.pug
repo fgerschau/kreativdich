@@ -13,6 +13,5 @@ block body
               != pagecontent.getText('homepage.subtitle')
     .slice
       .container
-        .text-center
           != pagecontent.getStructuredText('homepage.text').asHtml()
     .background.second(style='background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + pagecontent.getImage('homepage.carousel').url + '") no-repeat top center fixed')

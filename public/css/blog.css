@@ -15,7 +15,7 @@
   box-shadow: 0 3px 8px 3px grey;
 }
 /*Desktop*/
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 900px) {
   .post {
     margin: 3em 6em;
   }
