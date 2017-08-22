@@ -8,10 +8,10 @@ block body
     .row
       .col-xs-12
         .post
+          != post.text
+          br
           h4 Tags:
             p!= post.keywords
-          br
-          != post.text
 
   .background.small(style='background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat top center fixed')
         
