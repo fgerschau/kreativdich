@@ -11,4 +11,12 @@
   background: white;
   color: black;
 }
+.container {
+  text-align: left;
+}
 /*Desktop*/
+@media screen and (min-width: 900px) {
+  .container {
+    text-align: center;
+  }
+}
