@@ -10,6 +10,7 @@
   margin: 1em 0;
 }
 .block-img img {
+  max-width: 95%;
   max-height: 300px;
   box-shadow: 0 3px 8px 3px grey;
 }
