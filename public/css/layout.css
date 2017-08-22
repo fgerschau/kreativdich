@@ -53,6 +53,9 @@ a {
   color: #f694b8;
   text-decoration: inherit;
 }
+a.footer {
+  color: #f694b8;
+}
 a:hover {
   color: #f662b8;
 }
@@ -78,7 +81,7 @@ a:hover {
   height: 50px;
 }
 .footer img:hover {
-  filter: invert();
+  filter: drop-shadow(0 0 5px #f694b8);
 }
 nav .page-item.active .page-link {
   background-color: #f694b8;
