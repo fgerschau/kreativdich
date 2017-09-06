@@ -52,6 +52,8 @@ exports.getBlogList = function (req, res) {
 exports.getPost = function (req, res) {
   req.prismic.api.getByUID('blog-post', req.params.uid).then((prismicdoc) => {
     const ctx = res.locals.ctx;
+    const url = req.protocol + '://' + req.get('host') + req.originalUrl;
+    console.log(url);
     const post = {
       title: prismicdoc.getText('blog-post.title'),
       imageUrl: prismicdoc.getImage('blog-post.title-image') ? prismicdoc.getImage('blog-post.title-image').url : '',
@@ -59,7 +61,7 @@ exports.getPost = function (req, res) {
       keywords: prismicdoc.getText('blog-post.keywords') || null,
     }
 
-    res.render('blog', { post });
+    res.render('blog', { post, url });
   }).catch(handleError);
 }
 

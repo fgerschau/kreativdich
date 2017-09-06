@@ -1,4 +1,5 @@
 extends ./layout
+include ./mixins/socialbar
 block header
   link(href="/css/blog.css" rel="stylesheet")
 block body
@@ -8,7 +9,9 @@ block body
     .row
       .col-xs-12
         .post
+          +socialbar
           != post.text
+          +socialbar
           br
           h4 Tags:
             p!= post.keywords
