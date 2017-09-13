@@ -1,7 +1,7 @@
 extends ./layout
 include ./mixins/socialbar
 block header
-  link(href="/css/blog.css" rel="stylesheet")
+  link(href="/css/post.css" rel="stylesheet")
 block body
   .background(style='background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat top center fixed')
     h1.title.text-center!= post.title

@@ -45,7 +45,7 @@ exports.getBlogList = function (req, res) {
       totalPages: prismicdoc.total_pages,
     };
 
-    res.render('blogList', { posts, paginationOptions });
+    res.render('postList', { posts, paginationOptions });
   }).catch(handleError);
 }
 
@@ -60,7 +60,7 @@ exports.getPost = function (req, res) {
       keywords: prismicdoc.getText('blog-post.keywords') || null,
     }
 
-    res.render('blog', { post, url });
+    res.render('post', { post, url });
   }).catch(handleError);
 }
 

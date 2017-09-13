@@ -1,0 +1,26 @@
+.title {
+  padding-top: 4em;
+}
+.post {
+  margin: 3em 10px;
+}
+.block-img {
+  width: 100%;
+  text-align: center;
+  margin: 1em 0;
+}
+.block-img img {
+  max-width: 95%;
+  max-height: 300px;
+  box-shadow: 0 3px 8px 3px grey;
+}
+/*Desktop*/
+@media screen and (min-width: 900px) {
+  .post {
+    margin: 3em 6em;
+  }
+}
+iframe {
+  width: 100%;
+  max-width: 520px;
+}
