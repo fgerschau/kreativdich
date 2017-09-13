@@ -1,12 +1,12 @@
 .preview {
   height: 200px;
-  background-size: 100% !important;
+  background-size: 100%;
 }
 a {
   color: inherit;
 }
 .title {
-  padding: 25% 0;
+  padding-top: 70px;
 }
 .pagination {
   margin-left: 10px;
