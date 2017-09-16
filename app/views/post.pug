@@ -1,5 +1,6 @@
 extends ./layout
 include ./mixins/socialbar
+include ./mixins/comments
 block header
   link(href="/css/post.css" rel="stylesheet")
 block body
@@ -14,6 +15,7 @@ block body
           br
           h4 Tags:
             p!= post.keywords
+          +comments
 
   .background.small(style='background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("' + post.imageUrl + '") no-repeat top center fixed')
         
