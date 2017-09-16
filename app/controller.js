@@ -54,6 +54,7 @@ exports.getPost = function (req, res) {
     const ctx = res.locals.ctx;
     const url = req.protocol + '://' + req.get('host') + req.originalUrl;
     const post = {
+      id: prismicdoc.id,
       title: prismicdoc.getText('blog-post.title'),
       imageUrl: prismicdoc.getImage('blog-post.title-image') ? prismicdoc.getImage('blog-post.title-image').url : '',
       text: prismicdoc.getStructuredText('blog-post.text') ? prismicdoc.getStructuredText('blog-post.text').asHtml(ctx) : null,
