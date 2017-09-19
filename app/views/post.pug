@@ -1,6 +1,11 @@
 extends ./layout
 include ./mixins/socialbar
 include ./mixins/comments
+
+block title
+  title!=post.title
+    | | Kreativ Dich
+
 block header
   link(href="/css/post.css" rel="stylesheet")
 block body
