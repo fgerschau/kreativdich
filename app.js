@@ -1,4 +1,3 @@
-const Onboarding = require('./config/prismic/onboarding');
 const app = require('./config/express');
 const config = require('./config/config');
 
@@ -13,7 +12,6 @@ require('./config/routes')(app);
 const PORT = config.port;
 
 app.listen(PORT, () => {
-  Onboarding.trigger();
   logger.info('#################################');
   logger.info(`# Server started at port ${PORT}  #`);
   logger.info('#################################');

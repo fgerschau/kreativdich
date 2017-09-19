@@ -11,7 +11,6 @@ module.exports = function (app) {
     };
 
     Prismic.api(PrismicConfig.apiEndpoint, {
-      accessToken: PrismicConfig.accessToken,
       req,
     }).then((api) => {
       req.prismic = { api };

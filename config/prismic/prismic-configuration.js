@@ -1,6 +1,6 @@
 module.exports = {
 
-  apiEndpoint: 'https://kreativdich.prismic.io/api',
+  apiEndpoint: 'https://kreativdich.cdn.prismic.io/api',
 
   // -- Access token if the Master is not open
   // accessToken: 'xxxxxx',
