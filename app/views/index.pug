@@ -1,4 +1,6 @@
 extends ./layout.pug
+block meta
+  meta(property="og:image" content=pagecontent.getImage('homepage.carousel').url)
 block header
   link(rel="stylesheet" href="/css/index.css")
 block body
