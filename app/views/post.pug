@@ -5,6 +5,7 @@ include ./mixins/comments
 block title
   title!=post.title
     | | Kreativ Dich
+  meta(property="og:image" content=post.imageUrl)
 
 block header
   link(href="/css/post.css" rel="stylesheet")
