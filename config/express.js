@@ -10,7 +10,7 @@ const helmet = require('helmet');
 const logger = log4js.getLogger('Access');
 
 
-module.exports = (() => {
+module.exports = (env) => {
   const app = express();
 
   // all environments
@@ -21,7 +21,12 @@ module.exports = (() => {
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(methodOverride());
-  app.use(express.static(path.join(__dirname, '../public')));
+
+  // dev environment
+  if (env !== 'PROD') {
+    app.use(express.static(path.join(__dirname, '../public')));
+  }
+
   app.use(helmet());
 
   app.use(log4js.connectLogger(logger, { level: 'auto', format: ':method :url :status - :response-time ms' }));
@@ -30,4 +35,4 @@ module.exports = (() => {
   app.use(errorHandler());
 
   return app;
-})();
+};
