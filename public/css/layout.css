@@ -62,8 +62,8 @@ a:hover {
   color: inherit !important;
 }
 .nav_item_box {
-  display: inline-block;
-  max-width: 650px;
+  position: relative;
+  max-width: 960px;
   margin: 0 auto;
 }
 .footer {
