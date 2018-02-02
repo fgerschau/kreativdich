@@ -1,6 +1,5 @@
 const Prismic = require('prismic-nodejs');
 const PrismicConfig = require('./prismic-configuration');
-const Cookies = require('cookies');
 
 module.exports = function (app) {
   // Middleware to inject prismic context
