@@ -13,7 +13,7 @@
     "errorhandler": "~1.5.0",
     "express": "~4.16.0",
     "gulp": "^4.0.0",
-    "gulp-less": "^3.3.2",
+    "gulp-less": "^4.0.0",
     "helmet": "^3.8.1",
     "log4js": "^2.3.3",
     "method-override": "~2.3.9",
