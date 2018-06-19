@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "body-parser": "~1.17.2",
@@ -21,7 +23,8 @@
     "prismic-nodejs": "~1.5.0",
     "pug": "~2.0.0-rc.2",
     "request": "~2.82.0",
-    "serve-favicon": "~2.4.3"
+    "serve-favicon": "~2.4.3",
+    "snyk": "^1.83.0"
   },
   "repository": {
     "type": "git",
@@ -30,5 +33,6 @@
   "engines": {
     "node": ">=4.8.1",
     "npm": ">=2.15.11"
-  }
+  },
+  "snyk": true
 }
